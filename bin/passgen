@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+# encoding: utf-8
+
+$LOAD_PATH.unshift(File.expand_path(File.dirname(__FILE__), '/../lib'))
+
+$stdout.sync = true
+$stderr.sync = true
+
+require 'passgen'
+require 'passgen/cli'
+
+PassGen::CLI::Application::Run(ARGV)
