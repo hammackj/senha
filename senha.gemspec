@@ -17,8 +17,8 @@ Gem::Specification.new do |s|
 	s.email 								= "jacob.hammack@hammackj.com"
 	
 	s.files 								= Dir['[A-Z]*'] + Dir['lib/**/*'] + ['senha.gemspec']
-	s.default_executable 		= '#{Senha::APP_NAME}'
-	s.executables 					= ['#{Senha::APP_NAME}']
+	s.default_executable 		= "#{Senha::APP_NAME}"
+	s.executables 					= ["#{Senha::APP_NAME}"]
 	s.require_paths 				= ["lib"]
 	
 	s.has_rdoc 							= 'yard'
