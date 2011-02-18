@@ -22,10 +22,10 @@ Gem::Specification.new do |s|
 	s.require_paths 				= ["lib"]
 	
 	s.has_rdoc 							= 'yard'
-	s.extra_rdoc_files 			= ["README.md", "LICENSE", "NEWS.md", "TODO.md"]
+	s.extra_rdoc_files 			= ["README.markdown", "LICENSE", "NEWS.markdown"]
 	
 	s.required_rubygems_version = ">= 1.3.6"
-	s.rubyforge_project         = "nessusdb"
+	s.rubyforge_project         = "passgen"
 	
 	s.add_development_dependency("rspec", ">= 2.4.0")
 	s.add_development_dependency("rcov", ">= 0.9.9")
