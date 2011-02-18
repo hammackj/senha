@@ -2,7 +2,7 @@
 
 require 'optparse'
 
-module PassGen
+module Senha
 	module CLI
 		
 		# The Application class is responsible for the 
@@ -100,7 +100,7 @@ module PassGen
 			def run
 				options = parse_arguments
 				
-				gen = PassGen::Base::Generator.new(options)
+				gen = Senha::Base::Generator.new(options)
 								
 				options[:count].times do
 					puts gen.password(options[:length])

@@ -3,29 +3,29 @@
 base = __FILE__
 $:.unshift(File.join(File.dirname(base), 'lib'))
 
-require 'passgen'
+require 'senha'
 
 Gem::Specification.new do |s|
-	s.name 									= "#{PassGen::APP_NAME}"
-	s.version 							= PassGen::VERSION
+	s.name 									= "#{Senha::APP_NAME}"
+	s.version 							= Senha::VERSION
 	s.homepage 							= "http://www.hammackj.com/"
-	s.summary 							= "#{PassGen::APP_NAME}"
-	s.description 					= "#{PassGen::APP_NAME} is a password generation tool"
+	s.summary 							= "#{Senha::APP_NAME}"
+	s.description 					= "#{Senha::APP_NAME} is a password generation tool"
 	s.license								= "BSD"
 	
 	s.author 								= "Jacob Hammack"
 	s.email 								= "jacob.hammack@hammackj.com"
 	
-	s.files 								= Dir['[A-Z]*'] + Dir['lib/**/*'] + ['passgen.gemspec']
-	s.default_executable 		= 'passgen'
-	s.executables 					= ['passgen']
+	s.files 								= Dir['[A-Z]*'] + Dir['lib/**/*'] + ['senha.gemspec']
+	s.default_executable 		= '#{Senha::APP_NAME}'
+	s.executables 					= ['#{Senha::APP_NAME}']
 	s.require_paths 				= ["lib"]
 	
 	s.has_rdoc 							= 'yard'
 	s.extra_rdoc_files 			= ["README.markdown", "LICENSE", "NEWS.markdown"]
 	
 	s.required_rubygems_version = ">= 1.3.6"
-	s.rubyforge_project         = "passgen"
+	s.rubyforge_project         = "#{Senha::APP_NAME}"
 	
 	s.add_development_dependency("rspec", ">= 2.4.0")
 	s.add_development_dependency("rcov", ">= 0.9.9")

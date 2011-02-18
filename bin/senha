@@ -3,8 +3,8 @@
 
 $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '/../lib'))
 
-require 'passgen'
-require 'passgen/cli'
+require 'senha'
+require 'senha/cli'
 
-app = PassGen::CLI::Application.new
+app = Senha::CLI::Application.new
 app.run

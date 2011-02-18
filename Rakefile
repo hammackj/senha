@@ -1,12 +1,12 @@
 $LOAD_PATH.unshift File.expand_path("../lib", __FILE__)
-require "passgen"
+require "senha"
  
 task :build do
-  system "gem build passgen.gemspec"
+  system "gem build senha.gemspec"
 end
  
 task :release => :build do
-  system "gem push passgen-#{PassGen::VERSION}.gem"
+  system "gem push senha-#{Senha::VERSION}.gem"
 end
 
 task :clean do

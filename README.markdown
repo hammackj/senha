@@ -1,18 +1,18 @@
-# passgen
+# senha
 
-Passgen is a password generation tool for making random passwords based on a input requirement.
+Senha is a password generation tool for making random passwords based on a input requirement.
 
 # Usage
 
-Using passgen is relativley simple. Some example usage would be:
+Using senha is relativley simple. Some example usage would be:
 
-	% passgen -l
+	% senha -l
 	kpsyzatdpu
-	% passgen -n
+	% senha -n
 	3993355865
-	% passgen -a --length 20
+	% senha -a --length 20
 	M;w%Bwh8z-1NwYiS,#8h
-	% passgen -a --length 20 --count 10
+	% senha -a --length 20 --count 10
 	:QGZz:FqV88B4CQoPgiG
 	@m,obU-50uyI!#7-7l8A
 	i8u7R4mwcYI%.QBsEVtW
@@ -25,7 +25,7 @@ Using passgen is relativley simple. Some example usage would be:
 	#TyFKmzVTVer,;E-0^ro
 
 # Issues
-If you have any problems, bugs or feature requests please use the [github issue tracker](http://github.com/hammackj/passgen/issues).
+If you have any problems, bugs or feature requests please use the [github issue tracker](http://github.com/hammackj/senha/issues).
 
 # Contact
 You can reach me at jacob[dot]hammack[at]hammackj[dot]com.

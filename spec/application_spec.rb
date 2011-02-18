@@ -1,10 +1,10 @@
 base = __FILE__
 $:.unshift(File.join(File.dirname(base), '../lib'))
 
-require 'passgen'
-require 'passgen/cli'
+require 'senha'
+require 'senha/cli'
 
-module PassGen
+module Senha
 	module CLI
 		describe Application do
 			before(:each) do
