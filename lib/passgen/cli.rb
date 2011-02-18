@@ -1,7 +1,8 @@
 # encoding: utf-8
 
-module PassGen::CLI
-
+module PassGen
+	module CLI
+	end
 end
 
 require 'passgen/cli/application'
