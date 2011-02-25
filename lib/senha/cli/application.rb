@@ -66,15 +66,15 @@ module Senha
 							options[:length] = length#.to_i
 						end
 					
-						opt.on('-v', '--version', "Shows application version information") do
+						opt.on_tail('-v', '--version', "Shows application version information") do
 							puts "#{APP_NAME} - #{VERSION}"
 							exit
 						end
 
-						opt.on_tail("-?", "--help", "Show this message") { |help|
+						opt.on_tail("-?", "--help", "Show this message") do
 							puts opt.to_s + "\n"
 							exit
-						}
+						end
 
 					end
 								
