@@ -17,9 +17,9 @@ module Senha::Base
 			@numbers = ('0'..'9').to_a
 			@lower_case = ('a'..'z').to_a
 			@upper_case = ('A'..'Z').to_a
-			@punctuation = %w(. , ! : ;).to_a
-			@symbols = %w(! @ # $ % ^ & * - =).to_a
-			
+			@punctuation = %w(. , ! :).to_a
+			@symbols = %w(~ ! @ # $ % ^ & * ( ) _).to_a
+						
 			if options[:all]
 				@available_chars.concat @numbers 
 				@available_chars.concat @lower_case 
