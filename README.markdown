@@ -2,9 +2,15 @@
 
 Senha is a password generation tool for making random passwords based on a input requirement.
 
+#Installation
+Senha is released through [RubyGems](http://www.rubygems.org). This allows for an easier installation.
+
+  % gem update
+  % gem install risu
+
 # Usage
 
-Using senha is relativley simple. Some example usage would be:
+Using senha is relatively simple. Some example usage would be:
 
 	% senha -l
 	kpsyzatdpu

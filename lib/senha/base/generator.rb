@@ -1,5 +1,3 @@
-# encoding: utf-8
-
 module Senha::Base
 	
 	# A class for handling the generation of a password based on options

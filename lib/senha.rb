@@ -1,8 +1,6 @@
-# encoding: utf-8
-
 module Senha
 	APP_NAME = "senha"
-	VERSION = "0.0.1"
+	VERSION = "0.0.2"
 end
 
 require 'senha/base'
