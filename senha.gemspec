@@ -48,7 +48,7 @@ Gem::Specification.new do |s|
 	s.has_rdoc 							= 'yard'
 	s.extra_rdoc_files 			= ["README.markdown", "LICENSE", "NEWS.markdown"]
 
-	s.required_rubygems_version = ">= 1.3.6"
+	s.required_rubygems_version = ">= 1.6.0"
 	s.rubyforge_project         = "#{Senha::APP_NAME}"
 
 end

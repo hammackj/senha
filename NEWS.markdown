@@ -2,6 +2,7 @@
 
 # 0.0.3 (July 30, 2012)
 - License / Copyright changes
+- Removed rspec
 
 # 0.0.2 (March 1, 2012)
 - Copyright updates

@@ -41,7 +41,7 @@ end
 
 task :release => [:tag_and_bag, :build] do
   system "gem push #{Senha::APP_NAME}-#{Senha::VERSION}.gem"
-	puts "Just released #{Senha::APP_NAME} v#{Senha::VERSION}. #{Senha::APP_NAME} is always available in RubyGems! More information at http://hammackj.com/projects/senha/"
+	puts "Just released #{Senha::APP_NAME} v#{Senha::VERSION}. #{Senha::APP_NAME} is a simple CLI password generator. More information at http://hammackj.com/projects/senha/"
 end
 
 task :merge do
