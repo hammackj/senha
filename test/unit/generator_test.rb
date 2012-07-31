@@ -51,4 +51,69 @@ class GeneratorTest < Test::Unit::TestCase
 		pass = @gen.password
 		assert_match pass, /[a-z]{#{pass.size}}/
 	end
+
+	def test_0_9
+		options = {}
+		options[:numbers] = true
+		options[:length] = 10
+
+		10000.times do
+			gen = Senha::Base::Generator.new options
+			pass = gen.password
+
+			assert_match pass, /[0-9]{#{pass.size}}/
+		end
+	end
+
+	def test_A_Z
+		options = {}
+		options[:uppercase] = true
+		options[:length] = 10
+
+		10000.times do
+			gen = Senha::Base::Generator.new options
+			pass = gen.password
+
+			assert_match pass, /[A-Z]{#{pass.size}}/
+		end
+	end
+
+	def test_symbols
+		options = {}
+		options[:symbols] = true
+		options[:length] = 10
+
+		10000.times do
+			gen = Senha::Base::Generator.new options
+			pass = gen.password
+
+			assert_match pass, /[~!@#\$%\^\&\*\(\)_]{#{pass.size}}/
+		end
+	end
+
+	def test_punct
+		options = {}
+		options[:punct] = true
+		options[:length] = 10
+
+		10000.times do
+			gen = Senha::Base::Generator.new options
+			pass = gen.password
+
+			assert_match pass, /[!\.,:]{#{pass.size}}/
+		end
+	end
+
+	def test_all
+		options = {}
+		options[:all] = true
+		options[:length] = 10
+
+		10000.times do
+			gen = Senha::Base::Generator.new options
+			pass = gen.password
+
+			assert_match pass, /[a-zA-Z0-9!~@#\$%\^\&\*\(\)\.,:_]{#{pass.size}}/
+		end
+	end
 end
