@@ -115,7 +115,6 @@ module Senha
 			end
 
 			# Main body of the Application class
-			#
 			def run
 				options = parse_arguments
 
