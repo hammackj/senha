@@ -24,40 +24,31 @@
 #OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
 #OF THE POSSIBILITY OF SUCH DAMAGE.
 
-$LOAD_PATH.unshift File.expand_path("../lib", __FILE__)
+require 'test_helper'
 
-require "senha"
-require 'rake'
-require 'rake/testtask'
+class GeneratorTest < Test::Unit::TestCase
 
-task :build do
-  system "gem build #{Senha::APP_NAME}.gemspec"
+	def setup
+		options = {}
+		options[:lowercase] = true
+		options[:length] = 10
+
+		@gen = Senha::Base::Generator.new options
+	end
+
+	def test_26_chars
+		#{}"should have 26 available characters" do
+		assert @gen.available_chars.size == 26
+	end
+
+	def test_10_char_pass
+	#	"should generate a 10 character password"
+		assert @gen.password.size == 10
+	end
+
+	def test_a_z
+	#	"should generate a password with only [a-z]"
+		pass = @gen.password
+		assert_match pass, /[a-z]{#{pass.size}}/
+	end
 end
-
-task :tag_and_bag do
-	system "git tag -a v#{Risu::VERSION} -m 'version #{Risu::VERSION}'"
-	system "git push --tags"
-end
-
-task :release => [:tag_and_bag, :build] do
-  system "gem push #{Senha::APP_NAME}-#{Senha::VERSION}.gem"
-	puts "Just released #{Senha::APP_NAME} v#{Senha::VERSION}. #{Senha::APP_NAME} is always available in RubyGems! More information at http://hammackj.com/projects/senha/"
-end
-
-task :merge do
-	system "git checkout master"
-	system "get merge #{Risu::VERSION}"
-	system "git push"
-end
-
-task :clean do
-	system "rm *.gem"
-end
-
-Rake::TestTask.new("run_tests") do |t|
-	t.libs << "test"
-  t.pattern = 'test/*/*_test.rb'
-  t.verbose = true
-end
-
-task :default => [:run_tests]

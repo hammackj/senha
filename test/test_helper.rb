@@ -24,40 +24,11 @@
 #OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
 #OF THE POSSIBILITY OF SUCH DAMAGE.
 
-$LOAD_PATH.unshift File.expand_path("../lib", __FILE__)
+#require 'simplecov'
+#SimpleCov.start
 
-require "senha"
-require 'rake'
-require 'rake/testtask'
+base = __FILE__
+$:.unshift(File.join(File.dirname(base), '../lib'))
 
-task :build do
-  system "gem build #{Senha::APP_NAME}.gemspec"
-end
-
-task :tag_and_bag do
-	system "git tag -a v#{Risu::VERSION} -m 'version #{Risu::VERSION}'"
-	system "git push --tags"
-end
-
-task :release => [:tag_and_bag, :build] do
-  system "gem push #{Senha::APP_NAME}-#{Senha::VERSION}.gem"
-	puts "Just released #{Senha::APP_NAME} v#{Senha::VERSION}. #{Senha::APP_NAME} is always available in RubyGems! More information at http://hammackj.com/projects/senha/"
-end
-
-task :merge do
-	system "git checkout master"
-	system "get merge #{Risu::VERSION}"
-	system "git push"
-end
-
-task :clean do
-	system "rm *.gem"
-end
-
-Rake::TestTask.new("run_tests") do |t|
-	t.libs << "test"
-  t.pattern = 'test/*/*_test.rb'
-  t.verbose = true
-end
-
-task :default => [:run_tests]
+require 'test/unit'
+require 'senha'
