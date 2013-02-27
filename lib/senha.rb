@@ -27,6 +27,7 @@
 module Senha
 	APP_NAME = "senha"
 	VERSION = "0.0.4"
+	DEFAULT_LENGTH = 10
 end
 
 require 'optparse'

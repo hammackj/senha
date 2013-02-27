@@ -56,8 +56,8 @@ end
 
 Rake::TestTask.new("run_tests") do |t|
 	t.libs << "test"
-  t.pattern = 'test/*/*_test.rb'
-  t.verbose = true
+ 	t.pattern = 'test/*/*_test.rb'
+ 	t.verbose = verbose
 end
 
 task :default => [:run_tests]

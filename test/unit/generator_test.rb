@@ -49,71 +49,71 @@ class GeneratorTest < Test::Unit::TestCase
 	def test_a_z
 	#	"should generate a password with only [a-z]"
 		pass = @gen.password
-		assert_match /[a-z]{#{pass.size}}/, pass
+		assert_match /[a-z]{#{Senha::DEFAULT_LENGTH}}/, pass
 	end
 
 	def test_0_9
 		options = {}
 		options[:numbers] = true
-		options[:length] = 10
+		options[:length] = Senha::DEFAULT_LENGTH
 
 		10000.times do
 			gen = Senha::Base::Generator.new options
 			pass = gen.password
 
-			assert_match /[0-9]{#{pass.size}}/, pass
+			assert_match /[0-9]{#{Senha::DEFAULT_LENGTH}}/, pass
 		end
 	end
 
 	def test_A_Z
 		options = {}
 		options[:uppercase] = true
-		options[:length] = 10
+		options[:length] = Senha::DEFAULT_LENGTH
 
 		10000.times do
 			gen = Senha::Base::Generator.new options
 			pass = gen.password
 
-			assert_match /[A-Z]{#{pass.size}}/, pass
+			assert_match /[A-Z]{#{Senha::DEFAULT_LENGTH}}/, pass
 		end
 	end
 
 	def test_symbols
 		options = {}
 		options[:symbols] = true
-		options[:length] = 10
+		options[:length] = Senha::DEFAULT_LENGTH
 
 		10000.times do
 			gen = Senha::Base::Generator.new options
 			pass = gen.password
 
-			assert_match /[~!@#\$%\^\&\*\(\)_]{#{pass.size}}/, pass
+			assert_match /[~!@#\$%\^\&\*\(\)_]{#{Senha::DEFAULT_LENGTH}}/, pass
 		end
 	end
 
 	def test_punct
 		options = {}
 		options[:punct] = true
-		options[:length] = 10
+		options[:length] = Senha::DEFAULT_LENGTH
 
 		10000.times do
 			gen = Senha::Base::Generator.new options
 			pass = gen.password
 
-			assert_match /[!\.,:]{#{pass.size}}/, pass
+			assert_match /[!\.,:]{#{Senha::DEFAULT_LENGTH}}/, pass
 		end
 	end
 
 	def test_all
 		options = {}
 		options[:all] = true
-		options[:length] = 10
+		options[:length] = Senha::DEFAULT_LENGTH
 
 		10000.times do
 			gen = Senha::Base::Generator.new options
 			pass = gen.password
 
-			assert_match /[a-zA-Z0-9!~@#\$%\^\&\*\(\)\.,:_]{#{pass.size}}/, pass
+			assert_match /[a-zA-Z0-9!~@#\$%\^\&\*\(\)\.,:_]{#{Senha::DEFAULT_LENGTH}}/, pass
 		end
 	end
 end

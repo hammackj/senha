@@ -37,11 +37,11 @@ module Senha
 			end
 
 			# Parses the command line arguments
-			def parse_arguments
+			def parse_arguments (args)
 				begin
 					options = {}
 
-					options[:length] = 10
+					options[:length] = Senha::DEFAULT_LENGTH
 					options[:count] = 1
 
 					opts = OptionParser.new do |opt|
@@ -94,14 +94,13 @@ module Senha
 							puts opt.to_s + "\n"
 							exit
 						end
-
 					end
 
-					if ARGV.length != 0
-				    opts.parse!
-				  else
-				    puts opts.to_s + "\n"
-					  exit
+					if args.length != 0
+				    	opts.parse! args
+				  	else
+				    	puts opts.to_s + "\n"
+					  	exit
 					end
 
 					options
@@ -115,13 +114,15 @@ module Senha
 			end
 
 			# Main body of the Application class
-			def run
-				options = parse_arguments
+			def run(args)
+				options = parse_arguments(args)
 
-				gen = Senha::Base::Generator.new(options)
+				if options != nil
+					gen = Senha::Base::Generator.new(options)
 
-				options[:count].times do
-					puts gen.password(options[:length])
+					options[:count].times do
+						puts gen.password(options[:length])
+					end
 				end
 			end
 		end
