@@ -1,4 +1,4 @@
-# Copyright (c) 2010-2012 Arxopia LLC.
+# Copyright (c) 2010-2013 Arxopia LLC.
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -24,8 +24,8 @@
 #OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
 #OF THE POSSIBILITY OF SUCH DAMAGE.
 
-#require 'simplecov'
-#SimpleCov.start
+require 'simplecov'
+SimpleCov.start
 
 base = __FILE__
 $:.unshift(File.join(File.dirname(base), '../lib'))

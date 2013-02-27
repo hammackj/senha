@@ -1,4 +1,4 @@
-# Copyright (c) 2010-2012 Arxopia LLC.
+# Copyright (c) 2010-2013 Arxopia LLC.
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -49,7 +49,7 @@ class GeneratorTest < Test::Unit::TestCase
 	def test_a_z
 	#	"should generate a password with only [a-z]"
 		pass = @gen.password
-		assert_match pass, /[a-z]{#{pass.size}}/
+		assert_match /[a-z]{#{pass.size}}/, pass
 	end
 
 	def test_0_9
@@ -61,7 +61,7 @@ class GeneratorTest < Test::Unit::TestCase
 			gen = Senha::Base::Generator.new options
 			pass = gen.password
 
-			assert_match pass, /[0-9]{#{pass.size}}/
+			assert_match /[0-9]{#{pass.size}}/, pass
 		end
 	end
 
@@ -74,7 +74,7 @@ class GeneratorTest < Test::Unit::TestCase
 			gen = Senha::Base::Generator.new options
 			pass = gen.password
 
-			assert_match pass, /[A-Z]{#{pass.size}}/
+			assert_match /[A-Z]{#{pass.size}}/, pass
 		end
 	end
 
@@ -87,7 +87,7 @@ class GeneratorTest < Test::Unit::TestCase
 			gen = Senha::Base::Generator.new options
 			pass = gen.password
 
-			assert_match pass, /[~!@#\$%\^\&\*\(\)_]{#{pass.size}}/
+			assert_match /[~!@#\$%\^\&\*\(\)_]{#{pass.size}}/, pass
 		end
 	end
 
@@ -100,7 +100,7 @@ class GeneratorTest < Test::Unit::TestCase
 			gen = Senha::Base::Generator.new options
 			pass = gen.password
 
-			assert_match pass, /[!\.,:]{#{pass.size}}/
+			assert_match /[!\.,:]{#{pass.size}}/, pass
 		end
 	end
 
@@ -113,7 +113,7 @@ class GeneratorTest < Test::Unit::TestCase
 			gen = Senha::Base::Generator.new options
 			pass = gen.password
 
-			assert_match pass, /[a-zA-Z0-9!~@#\$%\^\&\*\(\)\.,:_]{#{pass.size}}/
+			assert_match /[a-zA-Z0-9!~@#\$%\^\&\*\(\)\.,:_]{#{pass.size}}/, pass
 		end
 	end
 end

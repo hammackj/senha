@@ -31,7 +31,7 @@ Using senha is relatively simple. Some example usage would be:
 	#TyFKmzVTVer,;E-0^ro
 
 # Issues
-If you have any problems, bugs or feature requests please use the [github issue tracker](http://github.com/hammackj/senha/issues).
+If you have any problems, bugs or feature requests please use the [github issue tracker](http://github.com/arxopia/senha/issues).
 
 # Contact
-You can reach me at jacob[dot]hammack[at]hammackj[dot]com.
+You can reach me at senha[at]arxopia[dot]com.

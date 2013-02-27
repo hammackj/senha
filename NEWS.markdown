@@ -1,5 +1,9 @@
 # News
 
+# 0.0.4 (2013)
+- Code cleanup for Ruby 2.0
+- Copyright updates
+
 # 0.0.3 (July 30, 2012)
 - License / Copyright changes
 - Removed rspec
