@@ -4,3 +4,4 @@ source :rubyforge
 source "http://gems.rubyforge.org"
 
 gem "simplecov"
+gem "rake"
