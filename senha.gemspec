@@ -30,25 +30,24 @@ $:.unshift(File.join(File.dirname(base), 'lib'))
 require 'senha'
 
 Gem::Specification.new do |s|
-	s.name 						= "#{Senha::APP_NAME}"
-	s.version 					= Senha::VERSION
-	s.homepage 					= "http://www.arxopia.com/projects/senha"
-	s.summary 					= "#{Senha::APP_NAME}"
-	s.description 				= "#{Senha::APP_NAME} is a password generation tool"
-	s.license					= "BSD"
+	s.name = "#{Senha::APP_NAME}"
+	s.version = Senha::VERSION
+	s.homepage = Senha::HOME_PAGE
+	s.summary = "#{Senha::APP_NAME}"
+	s.description = "#{Senha::APP_NAME} is a simple password generation tool"
+	s.license = "BSD"
 
-	s.author 					= "Jacob Hammack"
-	s.email 					= "senha@arxopia.com"
+	s.author = "Jacob Hammack"
+	s.email = "senha@arxopia.com"
 
-	s.files 					= Dir['[A-Z]*'] + Dir['lib/**/*'] + ['senha.gemspec']
-	s.default_executable 		= "#{Senha::APP_NAME}"
-	s.executables 				= ["#{Senha::APP_NAME}"]
-	s.require_paths 			= ["lib"]
+	s.files = Dir['[A-Z]*'] + Dir['lib/**/*'] + ['senha.gemspec']
+	s.default_executable = "#{Senha::APP_NAME}"
+	s.executables = ["#{Senha::APP_NAME}"]
+	s.require_paths = ["lib"]
 
-	s.has_rdoc 					= 'yard'
-	s.extra_rdoc_files 			= ["README.markdown", "LICENSE", "NEWS.markdown"]
+	s.has_rdoc 	= 'yard'
+	s.extra_rdoc_files = ["README.markdown", "LICENSE", "NEWS.markdown"]
 
-	s.required_rubygems_version = ">= 1.6.0"
-	s.rubyforge_project         = "#{Senha::APP_NAME}"
-
+	s.required_ruby_version = '>= 2.0.0'
+	s.rubyforge_project = "#{Senha::APP_NAME}"
 end
