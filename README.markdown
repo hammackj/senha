@@ -1,4 +1,4 @@
-# senha [![Build Status](https://travis-ci.org/hammackj/senha.svg?branch=dev)](https://travis-ci.org/hammackj/senha)
+# senha [![Gem Version](https://badge.fury.io/rb/senha.png)](http://badge.fury.io/rb/senha) [![Build Status](https://travis-ci.org/hammackj/senha.svg?branch=dev)](https://travis-ci.org/hammackj/senha)
 
 Senha is a password generation tool for making random passwords based on a input requirement.
 
