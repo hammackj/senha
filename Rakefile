@@ -34,7 +34,7 @@ task :tag_and_bag do
 	system "git tag -a v#{Senha::VERSION} -m 'version #{Senha::VERSION}'"
 	system "git push --tags"
 	system "git checkout master"
-	system "git merge #{Senha::VERSION}"
+	system "git merge dev"
 	system "git push"
 end
 

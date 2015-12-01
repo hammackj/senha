@@ -1,5 +1,8 @@
 # News
 
+# 1.0.0 (December 31, 2015)
+- Updated Copyrights
+
 # 0.0.4 (2013)
 - Code cleanup for Ruby 2.0
 - Copyright updates

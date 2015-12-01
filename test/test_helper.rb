@@ -1,4 +1,4 @@
-# Copyright (c) 2010-2013 Arxopia LLC.
+# Copyright (c) 2010-2016 Arxopia LLC.
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -21,21 +21,18 @@
 # LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA,
 # OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
 # LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
-#OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
-#OF THE POSSIBILITY OF SUCH DAMAGE.
-
-require 'simplecov'
-SimpleCov.start
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED
+# OF THE POSSIBILITY OF SUCH DAMAGE.
 
 base = __FILE__
 $:.unshift(File.join(File.dirname(base), '../lib'))
 
-require 'test/unit'
+require 'minitest/autorun'
 require 'senha'
 require 'stringio'
- 
+
 module Kernel
- 
+
   def capture_stdout
     out = StringIO.new
     $stdout = out
