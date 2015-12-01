@@ -26,8 +26,9 @@
 
 module Senha
 	APP_NAME = "senha"
-	VERSION = "0.0.4"
-	DEFAULT_LENGTH = 10
+	VERSION = "1.0.0"
+	HOME_PAGE = "http://hammackj.github.io/senha"
+	DEFAULT_LENGTH = 15
 end
 
 require 'optparse'
