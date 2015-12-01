@@ -1,4 +1,4 @@
-# Copyright (c) 2010-2013 Arxopia LLC.
+# Copyright (c) 2010-2016 Arxopia LLC.
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -37,7 +37,7 @@ class ApplicationTest < Test::Unit::TestCase
 			@app.run(["-QQ"])
 		end
 
-		assert out.string.length == 915, "GOT #{out.string.length}"		
+		assert out.string.length == 915, "GOT #{out.string.length}"
 	end
 
 	def test_missing
@@ -45,7 +45,7 @@ class ApplicationTest < Test::Unit::TestCase
 			@app.run(["--length"])
 		end
 
-		assert out.string.length == 915, "GOT #{out.string.length}"		
+		assert out.string.length == 915, "GOT #{out.string.length}"
 	end
 
 	def test_nil
@@ -53,8 +53,8 @@ class ApplicationTest < Test::Unit::TestCase
 			@app.run([])
 		end
 
-		assert out.string.length == 916, "GOT #{out.string.length}"		
-	end	
+		assert out.string.length == 916, "GOT #{out.string.length}"
+	end
 
 	def test_n
 		out = capture_stdout do
@@ -69,7 +69,7 @@ class ApplicationTest < Test::Unit::TestCase
 			@app.run(["-p"])
 		end
 
-		assert_match /[!\.,:]{#{Senha::DEFAULT_LENGTH}}/, out.string		
+		assert_match /[!\.,:]{#{Senha::DEFAULT_LENGTH}}/, out.string
 	end
 
 	def test_s
@@ -77,7 +77,7 @@ class ApplicationTest < Test::Unit::TestCase
 			@app.run(["-s"])
 		end
 
-		assert_match /[~!@#\$%\^\&\*\(\)_]{#{Senha::DEFAULT_LENGTH}}/, out.string		
+		assert_match /[~!@#\$%\^\&\*\(\)_]{#{Senha::DEFAULT_LENGTH}}/, out.string
 	end
 
 	def test_l
@@ -85,7 +85,7 @@ class ApplicationTest < Test::Unit::TestCase
 			@app.run(["-l"])
 		end
 
-		assert_match /[a-z]{#{Senha::DEFAULT_LENGTH}}/, out.string		
+		assert_match /[a-z]{#{Senha::DEFAULT_LENGTH}}/, out.string
 	end
 
 	def test_u
@@ -93,7 +93,7 @@ class ApplicationTest < Test::Unit::TestCase
 			@app.run(["-u"])
 		end
 
-		assert_match /[A-Z]{#{Senha::DEFAULT_LENGTH}}/, out.string		
+		assert_match /[A-Z]{#{Senha::DEFAULT_LENGTH}}/, out.string
 	end
 
 	def test_a
@@ -101,7 +101,7 @@ class ApplicationTest < Test::Unit::TestCase
 			@app.run(["-a"])
 		end
 
-		assert_match /[a-zA-Z0-9!~@#\$%\^\&\*\(\)\.,:_]{#{Senha::DEFAULT_LENGTH}}/, out.string		
+		assert_match /[a-zA-Z0-9!~@#\$%\^\&\*\(\)\.,:_]{#{Senha::DEFAULT_LENGTH}}/, out.string
 	end
 
 	def test_count
@@ -109,7 +109,7 @@ class ApplicationTest < Test::Unit::TestCase
 			@app.run(["--count", "20", "-n"])
 		end
 
-		assert out.string.length == 220, "GOT #{out.string.length}"	
+		assert out.string.length == 220, "GOT #{out.string.length}"
 	end
 
 	def test_length
@@ -117,7 +117,7 @@ class ApplicationTest < Test::Unit::TestCase
 			@app.run(["--length", "20", "-n"])
 		end
 
-		assert out.string.length == 21, "GOT #{out.string.length}"	
+		assert out.string.length == 21, "GOT #{out.string.length}"
 	end
 
 	def test_version
