@@ -10,6 +10,7 @@ Senha is released through [RubyGems](http://www.rubygems.org). This allows for a
   % gem update
   % gem install senha
 
+
 # Usage
 
 Using senha is relatively simple. Some example usage would be:
@@ -17,11 +18,14 @@ Using senha is relatively simple. Some example usage would be:
   % senha -l
   kpsyzatdpu
 
+
   % senha -n
   3993355865
 
+
   % senha -a --length 20
   M;w%Bwh8z-1NwYiS,#8h
+
 
   % senha -a --length 20 --count 10
   :QGZz:FqV88B4CQoPgiG
