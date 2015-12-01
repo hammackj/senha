@@ -26,7 +26,7 @@
 
 require 'test_helper'
 
-class ApplicationTest < Test::Unit::TestCase
+class ApplicationTest < Minitest::Test
 
 	def setup
 		@app = Senha::CLI::Application.new

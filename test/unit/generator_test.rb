@@ -26,7 +26,7 @@
 
 require 'test_helper'
 
-class GeneratorTest < Test::Unit::TestCase
+class GeneratorTest < Minitest::Test
 
 	def setup
 		options = {}
